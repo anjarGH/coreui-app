@@ -1,0 +1,27 @@
+// Here you can add other styles
+
+// custom .chartjs-tooltip-body-item padding
+@import "charts";
+
+// custom tweaks for scrollbar styling (wip)
+@import "scrollbar";
+
+// from template
+@import url("./css/theme.css");
+@import url("./css/theme-elements.css");
+@import url("./css/theme-blog.css");
+@import url("./css/theme-shop.css");
+
+@import url("./vendor/animate/animate.compat.css");
+@import url("./vendor/simple-line-icons/css/simple-line-icons.min.css");
+@import url("./vendor/magnific-popup/magnific-popup.min.css");
+
+ // custom calendar today cell color
+.calendar-cell.today {
+  --cui-calendar-cell-today-color: var(--cui-info) !important;
+}
+
+// custom select week cursor pointer
+.select-week .calendar-row.current {
+  cursor: pointer;
+}

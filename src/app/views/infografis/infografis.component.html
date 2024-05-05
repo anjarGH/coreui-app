@@ -1,0 +1,40 @@
+  <c-card class="my-4">
+  <c-card-body>
+    <c-input-group>
+      <span cInputGroupText>Cari</span>
+      <input aria-label="Cari" cFormControl />
+      <button cButton color="secondary" id="button-addon2" type="button" variant="outline">Cari</button>
+    </c-input-group>
+
+    <div cListGroup style="margin-bottom: 20px;">
+      @for (item of imageSrc; track item;) {
+        <c-row style="margin-top: 20px;">
+          @for (dd of item; track dd;) {
+          <c-col>
+            <img [src]="dd" alt="" class="d-block w-100" loading="lazy" />
+          </c-col>
+          }
+        </c-row>
+      }
+    </div>
+
+    <c-pagination align="center" aria-label="Page navigation" size="lg">
+      <c-page-item>
+        <a cPageLink [routerLink]="[]">Previous</a>
+      </c-page-item>
+      <c-page-item>
+        <a cPageLink [routerLink]="[]">1</a>
+      </c-page-item>
+      <c-page-item>
+        <a cPageLink [routerLink]="[]">2</a>
+      </c-page-item>
+      <c-page-item>
+        <a cPageLink [routerLink]="[]">3</a>
+      </c-page-item>
+      <c-page-item>
+        <a cPageLink [routerLink]="[]">Next</a>
+      </c-page-item>
+    </c-pagination>
+  </c-card-body>
+</c-card>
+  
