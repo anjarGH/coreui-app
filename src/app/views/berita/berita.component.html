@@ -1,0 +1,90 @@
+<c-card class="my-4">
+  <c-card-body>
+    <c-row>
+      <c-col sm="8">
+        <c-carousel (itemChange)="onItemChange($event)" [interval]="3000" transition="slide" [wrap]="false">
+          <c-carousel-indicators></c-carousel-indicators>
+          <c-carousel-inner>
+            @for (slide of slides; track slide.src) {
+              <c-carousel-item>
+                <img
+                  [src]="slide.src"
+                  alt="{{slide.title}}"
+                  class="d-block w-100"
+                  loading="lazy"
+                />
+                <c-carousel-caption class="d-none d-md-block">
+                  <h3>{{ slide.title }}</h3>
+                  <p>{{ slide.subtitle }}</p>
+                </c-carousel-caption>
+              </c-carousel-item>
+            }
+          </c-carousel-inner>
+          <c-carousel-control caption="Previous" direction="prev" i18n-caption></c-carousel-control>
+          <c-carousel-control caption="Next" direction="next" i18n-caption></c-carousel-control>
+        </c-carousel>
+      </c-col>
+      <c-col sm="4">
+        <div cListGroup>
+          <a [active]="true" cListGroupItem href>
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small>3 days ago</small>
+            </div>
+            <p class="mb-1">
+              Donec id elit non mi porta gravida at eget metus. Maecenas sed
+              diam eget risus varius blandit.
+            </p>
+            <small>Donec id elit non mi porta.</small>
+          </a>
+          <a cListGroupItem href>
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small class="text-body-secondary">3 days ago</small>
+            </div>
+            <p class="mb-1">
+              Donec id elit non mi porta gravida at eget metus. Maecenas sed
+              diam eget risus varius blandit.
+            </p>
+            <small class="text-body-secondary"
+            >Donec id elit non mi porta.</small
+            >
+          </a>
+          <a cListGroupItem href>
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small class="text-body-secondary">3 days ago</small>
+            </div>
+            <p class="mb-1">
+              Donec id elit non mi porta gravida at eget metus. Maecenas sed
+              diam eget risus varius blandit.
+            </p>
+            <small class="text-body-secondary"
+            >Donec id elit non mi porta.</small
+            >
+          </a>
+        </div>
+      </c-col>
+    </c-row>
+  </c-card-body>
+</c-card>
+    
+<c-card class="my-4">
+  <c-card-body>
+    <c-input-group>
+      <span cInputGroupText>Cari</span>
+      <input aria-label="Cari" cFormControl />
+      <button cButton color="secondary" id="button-addon2" type="button" variant="outline">Cari</button>
+    </c-input-group>
+
+    <div cListGroup>
+      @for (item of sampleList; track item; let i = $index, last = $last) {
+        <button cListGroupItem class="d-flex justify-content-between align-items-center" [disabled]="last">
+          {{ item }}
+          <c-badge [color]="last ? 'secondary': 'primary'" shape="rounded-pill">{{ i + 1 }}</c-badge>
+        </button>
+      }
+    </div>
+  </c-card-body>
+</c-card>
+  

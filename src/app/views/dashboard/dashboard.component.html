@@ -1,0 +1,177 @@
+<c-card class="my-4">
+  <c-card-body>
+    <c-carousel (itemChange)="onItemChange($event)" [interval]="3000" transition="slide" [wrap]="false">
+      <c-carousel-indicators></c-carousel-indicators>
+      <c-carousel-inner>
+        @for (slide of slides; track slide.src) {
+          <c-carousel-item>
+            <img
+              [src]="slide.src"
+              alt="{{slide.title}}"
+              class="d-block w-100"
+              loading="lazy"
+            />
+            <c-carousel-caption class="d-none d-md-block">
+              <h3>{{ slide.title }}</h3>
+              <p>{{ slide.subtitle }}</p>
+            </c-carousel-caption>
+          </c-carousel-item>
+        }
+      </c-carousel-inner>
+      <c-carousel-control caption="Previous" direction="prev" i18n-caption></c-carousel-control>
+      <c-carousel-control caption="Next" direction="next" i18n-caption></c-carousel-control>
+    </c-carousel>
+  </c-card-body>
+</c-card>
+
+<!-- <app-widgets-dropdown /> -->
+
+<section class="section bg-color-grey section-height-3 border-0 m-0">
+  <div class="container">
+    <!-- <div class="row">
+      <div class="col">
+        <h2 class="font-weight-normal text-center text-6 pb-3">Our <strong class="font-weight-extra-bold">Services</strong></h2>
+      </div>
+    </div> -->
+    <div class="row mb-lg-4">
+      <div class="col-lg-4" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Data Triwulan</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing <span class="alternative-font">metus.</span> elit. Quisque rutrum pellentesque imperdiet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-appear-animation="fadeInUpShorter">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Data Tahunan</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Data Sectoral</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Gende</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-appear-animation="fadeInUpShorter">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Kecamata</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing <span class="alternative-font">metus.</span> elit. Quisque rutrum pellentesque imperdiet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Indikator Kerja</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">SDGs</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-appear-animation="fadeInUpShorter">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Tanya Den Mas</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing <span class="alternative-font">metus.</span> elit. Quisque rutrum pellentesque imperdiet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Elibrary</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Peta Tematik</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-appear-animation="fadeInUpShorter">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Open Data</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing <span class="alternative-font">metus.</span> elit. Quisque rutrum pellentesque imperdiet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+        <div class="feature-box feature-box-style-2">
+          <div class="feature-box-icon">
+            <svg cIcon name="cilMenu" size="lg"></svg>
+          </div>
+          <div class="feature-box-info">
+            <h4 class="font-weight-bold mb-2">Harga</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
